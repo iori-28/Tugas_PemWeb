@@ -1,14 +1,14 @@
 const container = document.querySelector(".container");
 const content = document.getElementById("content");
 
-// Flag untuk cek apakah Home bubble sudah ditambahkan
+// cek apakah Home bubble sudah ditambahkan
 let homeVisible = false;
 
 content.innerHTML = `
     <div class="card welcome">
       <h2>Rio Rasyha Syadzily<br>24416255201209</h2>
-      <p>Ini adalah web latihan/tugas dari matkul Pemrogaman Web. Klik salah satu bubble lain untuk melihat isi didalam nya.</p>
-      <img src="Poto_tugas.jpg" alt="Poto Tugas" class="welcome-img">
+      <p>Ini adalah web latihan/tugas dari matkul Pemrogaman Web. Klik salah satu bubble untuk melihat isi di dalam nya.</p>
+      <img src="img/Poto_tugas.jpg" alt="Poto Tugas" class="welcome-img">
     </div>
 `;
 
@@ -25,8 +25,8 @@ document.querySelectorAll(".bubble").forEach(bubble => {
       content.innerHTML = `
         <div class="card welcome">
           <h2>Rio Rasyha Syadzily<br>24416255201209</h2>
-          <p>Ini adalah web latihan/tugas dari matkul Pemrogaman Web. Klik salah satu bubble lain untuk melihat isi didalam nya.</p>
-          <img src="Poto_tugas.jpg" alt="Poto Tugas" class="welcome-img">
+          <p>Ini adalah web latihan/tugas dari matkul Pemrogaman Web. Klik salah satu bubble untuk melihat isi di dalam nya.</p>
+          <img src="img/Poto_tugas.jpg" alt="Poto Tugas" class="welcome-img">
         </div>
       `;
 
@@ -48,27 +48,27 @@ document.querySelectorAll(".bubble").forEach(bubble => {
           </div>
 
           <div class="gallery-item">
-            <img src="code_html.png" alt="gambar kodingan html">
+            <img src="img/code_html.png" alt="gambar kodingan html">
             <p class="caption">Kodingan HTML</p>
           </div>
 
           <div class="gallery-item">
-            <img src="code_js.png" alt="gambar kodingan js">
+            <img src="img/code_js.png" alt="gambar kodingan js">
             <p class="caption">Kodingan JavaScript</p>
           </div>
           
           <div class="gallery-item">
-            <img src="code_css.png" alt="gambar kodingan css">
+            <img src="img/code_css.png" alt="gambar kodingan css">
             <p class="caption">Kodingan CSS</p>
           </div>
           
           <div class="gallery-item">
-            <img src="Screenshot_hoki.png" alt="gambar hoki">
+            <img src="img/Screenshot_hoki.png" alt="gambar hoki">
             <p class="caption">Hoki Gacha</p>
           </div>
           
           <div class="gallery-item">
-            <img src="Screenshot_hoki2.png" alt="gambar hoki2">
+            <img src="img/Screenshot_hoki2.png" alt="gambar hoki2">
             <p class="caption">Hoki Gacha 2</p>
           </div>
         </div>
@@ -138,8 +138,8 @@ function addHomeBubble() {
       content.innerHTML = `
         <div class="card welcome">
           <h2>Rio Rasyha Syadzily<br>24416255201209</h2>
-          <p>Ini adalah web latihan/tugas dari matkul Pemrogaman Web. Klik salah satu bubble lain untuk melihat isi didalam nya.</p>
-          <img src="Poto_tugas.jpg" alt="Poto Tugas" class="welcome-img">
+          <p>Ini adalah web latihan/tugas dari matkul Pemrogaman Web. Klik salah satu bubble untuk melihat isi di dalam nya.</p>
+          <img src="img/Poto_tugas.jpg" alt="Poto Tugas" class="welcome-img">
         </div>
       `;
 
@@ -152,17 +152,3 @@ function addHomeBubble() {
     homeVisible = true;
   }
 }
-
-// Klik bubble → langsung jadi sidebar
-$(".bubble").on("click", function () {
-  $(".container").addClass("fixed");
-});
-
-// Scroll → atur posisi bubble
-$(window).on("scroll", function () {
-  if ($(this).scrollTop() > 150) {
-    $(".container").addClass("fixed");
-  } else {
-    $(".container").removeClass("fixed");
-  }
-});

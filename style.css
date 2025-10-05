@@ -51,12 +51,65 @@ body {
 }
 
 header {
-    margin-bottom: 20px;
+    width: 80%;
+    max-width: 900px;
+    background: transparent;
+    margin: 0 auto 20px auto;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
+    text-align: center;
     color: #333;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    cursor: default;
+}
+
+header h1:hover {
+    transform: scale(1.05);
+    color: #dafffb;
+    text-shadow: 0 0 10px rgba(0, 127, 115, 0.3);
+}
+
+.bubble-title {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.bubble-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation: bubblePulse 3s infinite ease-in-out;
+    z-index: -1;
+}
+
+@keyframes bubblePulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.9;
+    }
+}
+
+.bubble-title h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 2.3rem;
+    color: #2b2b2b;
 }
 
 .sidebar {
